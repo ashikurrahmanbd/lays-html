@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Pattaya&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style-type: none;
+}
+
+:root {
+  --color-primary-red: #FE3E36;
+  --color-black: #041625;
+  --color-offwhite: #F1F3F4;
+  --color-yellow: #F2B305;
+  --color-button-bg: #FE3E36;
+  --body-bg-light: #FADDD5;
+  --body-bg-extra-light: #FADDD5;
+  --text-color-dark: #1E1E1E;
+  --text-offwhite: #707070;
+  --link-color: #F1F3F4;
+  --link-hover-color: #FE3E36;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Pattaya", sans-serif;
+}
+
+p {
+  font-family: "Cabin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+}
+
+/*# sourceMappingURL=style.css.map */
