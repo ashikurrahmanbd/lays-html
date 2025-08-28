@@ -1,0 +1,123 @@
+//base
+@use '../base/reset';
+@use '../base/variables';
+@use '../base/typography';
+@use '../base/functions';
+@use '../base/mixins';
+
+/** *************** Header CSS ****************** **/
+
+header{
+    background-color: var(--color-black);
+    padding: 15px 0;
+    .header-elements{
+        display: flex;
+        
+        align-items: center;
+        justify-content: space-between;
+
+        .logo{
+            max-width: 180px;
+            img{
+                width: 100%;
+            }
+        }
+
+        .site-menu{
+            @include mixins.responsive(medium){
+                display: none;
+            }
+            ul{
+                li{
+                    display: inline-flex;
+                    margin: 0 10px;
+                   
+                    &:hover{
+                        a{
+                            color: var(--color-red);
+                        }
+                    }
+                    a{
+                        display: inline-block;
+                        padding: 10px 18px;
+                        color: #fff;
+                        font-size: 20px;
+                        font-family: "Pattaya", sans-serif;
+                        transition: .2s ease-in-out;
+                    }
+                }
+            }
+        }
+
+        .cta-button{
+            @include mixins.responsive(medium){
+                display: none;
+            }
+            a{
+                color: white;
+                font-family: "Cabin", sans-serif;
+                font-size: 20px;
+                background-color: var(--color-red);
+                padding: 12px 28px;
+                display: inline-block;
+                border-radius: 50px;
+                transition: background-color 0.4s ease-in-out;
+                &:hover{
+                    background-color: var(--color-yellow);
+                }
+            }
+        }
+
+        .mobile-menu{
+            display: none;
+            position: relative;
+            @include mixins.responsive(medium){
+                display: block;
+            }
+            i{
+                color: #fff;
+                font-size: 24px;
+                cursor: pointer;
+                
+            }
+            ul{
+                
+                position: absolute;
+                right: 0;
+                top: 40px;
+                width: 180px;
+                background-color: #fff;
+
+                opacity: 0;
+                transform: scale(0.5) translateY(-20px); /* start small + above */
+                transform-origin: top right; /* animation starts from the bars corner */
+                pointer-events: none; /* prevent clicks when hidden */
+                transition: all 0.3s ease;
+                
+                &.active{
+                    opacity: 1;
+                    transform: scale(1) translateY(0);
+                    pointer-events: auto;
+                }
+                li{
+                    margin: 10px;
+                    &:hover{
+                        a{
+                            color: var(--color-red);
+                        }
+                    }
+                    a{
+                        display: inline-block;
+                        color: #000;
+                        padding: 10px 15px;
+                         font-family: "Pattaya", sans-serif;
+                        font-size: 20px;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+/** *************** End Header CSS ****************** **/

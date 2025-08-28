@@ -1,0 +1,32 @@
+@use '../base/variables';
+
+
+.button-primary{
+    color: white;
+    font-family: "Cabin", sans-serif;
+    font-size: 20px;
+    background-color: var(--color-red);
+    padding: 12px 28px;
+    display: inline-block;
+    border-radius: 50px;
+    transition: background-color 0.2s ease-in-out;
+    
+    &:hover{
+        background-color: var(--color-yellow);
+    }
+}
+
+
+.button-primary-small{
+    color: white;
+    font-family: "Cabin", sans-serif;
+    font-size: 16px;
+    background-color: var(--color-red);
+    padding: 8px 15px;
+    display: inline-block;
+    border-radius: 50px;
+    transition: background-color 0.4s ease-in-out;
+    &:hover{
+        background-color: var(--color-yellow);
+    }
+}

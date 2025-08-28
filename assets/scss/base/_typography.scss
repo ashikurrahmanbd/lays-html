@@ -1,11 +1,40 @@
+@use './mixins';
+
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Pattaya&display=swap');
+
+
 
 h1, h2, h3, h4, h5, h6{
     font-family: "Pattaya", sans-serif;
+}
+
+h1{
+    font-size: 75px;
+    line-height: 1.2em;
+}
+
+h2{
+    font-size: 40px;
+    line-height: 1.2em;
+}
+
+h4{
+    font-size: 24px;
+}
+
+h5{
+    font-size: 20px;
 }
 
 p{
     font-family: "Cabin", sans-serif;
     font-optical-sizing: auto;
     font-weight: 200;
+    font-size: 18px;
+    margin-bottom: 25px;
+    line-height: 1.5em;
+
+    @include mixins.responsive(small){
+        font-size: 16px;
+    }
 }

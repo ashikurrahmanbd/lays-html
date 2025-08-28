@@ -1,0 +1,21 @@
+@use '../base/mixins';
+
+/** Site Layout Container **/
+.site-container{
+    max-width: 1440px;
+    padding: 0 100px;
+    margin:0 auto;
+
+    
+    @include mixins.responsive(medium){
+        max-width: 940px;
+        padding: 0 15px;
+    }
+
+    @include mixins.responsive(small){
+        max-width: 576px;
+        
+    }
+
+    
+}

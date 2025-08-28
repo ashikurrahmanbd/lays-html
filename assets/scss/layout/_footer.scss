@@ -1,0 +1,66 @@
+//base
+@use '../base/reset';
+@use '../base/variables';
+@use '../base/typography';
+@use '../base/functions';
+@use '../base/mixins';
+
+
+
+/** *************** Started Footer Section CSS ****************** **/
+
+.footer-section{
+    background-color: var(--color-black);
+    padding: 40px 0;
+
+    .footer-elements{
+        .social-icons{
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            
+
+            a{
+                display: inline-block;
+                i{
+                    color: #fff;
+                    font-size: 22px;
+                }
+            }
+            
+        }
+
+        .footer-menu{
+            margin-top: 40px;
+            ul{
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 25px;
+                li{
+                    a{
+                        display: inline-block;
+                        color: #fff;
+                        font-size: 20px;
+                        font-family: "Pattaya", sans-serif;
+                        font-weight: regular;
+                    }
+                }
+            }
+        }
+
+        .copyright-text{
+            margin-top: 50px;
+            text-align: center;
+            p{
+                color: #fff;
+                margin: 0;
+            }
+        }
+    }
+}
+
+/** *************** End of Footer Section CSS ****************** **/
